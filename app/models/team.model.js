@@ -16,11 +16,18 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.INTEGER
         },
         cast_value: {
-            type: Sequelize.FLOAT
+            type: Sequelize.DOUBLE
         },
         international_champion: {
             type: Sequelize.BOOLEAN
+        },
+        id_league: {
+            type: Sequelize.INTEGER,
+            references: {
+                model: 'league',
+                key: 'id'
         }
+    }
     });
 
     return Teams;
