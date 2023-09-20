@@ -21,13 +21,13 @@ module.exports = (sequelize, Sequelize) => {
         international_champion: {
             type: Sequelize.BOOLEAN
         },
-        id_league: {
-            type: Sequelize.INTEGER,
-            references: {
-                model: 'league',
-                key: 'id'
-        }
-    }
+    //     id_league: {
+    //         type: Sequelize.INTEGER,
+    //         references: {
+    //             model: 'league',
+    //             key: 'id'
+    //     }
+    // }
     });
 
     return Teams;

@@ -27,7 +27,7 @@ exports.create = (req, res) => {
     .catch(err => {
         res.status(500).send({
             message:
-            err.message || "Algum erro aconteceu ao tentar criar um item."
+            err.message || "Algum erro aconteceu ao tentar criar um time."
         })
     })
 };
@@ -46,7 +46,7 @@ exports.findAll = (req, res) => {
     .catch(err => {
         res.status(500).send({
             message:
-                err.message || "Algum erro aconteceu ao tentar pesquisar pelos itens."
+                err.message || "Algum erro aconteceu ao tentar pesquisar pelos times."
         })
     })
 };
@@ -60,13 +60,13 @@ exports.findOne = (req, res) => {
                 res.send(data);
             } else {
                 res.status(404).send({
-                    message: `Não foi possível encontrar um item com o id=${id}.`
+                    message: `Não foi possível encontrar um time com o id=${id}.`
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
-                message: "Ocorreu um erro ao tentar encontrar um item com o id=" + id
+                message: "Ocorreu um erro ao tentar encontrar um time com o id=" + id
             });
         });
 };
@@ -80,17 +80,17 @@ exports.update = (req, res) => {
         .then(num => {
             if (num == 1) {
                 res.send({
-                    message: "O item foi atualizado de maneira bem sucedida."
+                    message: "O time foi atualizado de maneira bem sucedida."
                 });
             } else {
                 res.send({
-                    message: `Não foi possível atualizar o item com o id=${id}.`
+                    message: `Não foi possível atualizar o time com o id=${id}.`
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
-                message: "Ocorreu um erro ao tentar atualizar um item como o id=" + id
+                message: "Ocorreu um erro ao tentar atualizar um time como o id=" + id
             });
         });   
 };
@@ -104,17 +104,17 @@ exports.delete = (req, res) => {
         .then(num => {
             if (num == 1) {
                 res.send({
-                    message: "O item foi apagado com sucesso!"
+                    message: "O time foi apagado com sucesso!"
                 });
             } else {
                 res.send({
-                    message: `Não foi possível apagar o item com o id=${id}.`
+                    message: `Não foi possível apagar o time com o id=${id}.`
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
-                message: "Ocorreu um erro ao tentar apagar o item com o id=" + id
+                message: "Ocorreu um erro ao tentar apagar o time com o id=" + id
             });
         });
 };
@@ -130,7 +130,7 @@ exports.deleteAll = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Algum erro ocorreu ao tentar apagar todos os itens."
+                    err.message || "Algum erro ocorreu ao tentar apagar todos os times."
             });
         });
 };
@@ -143,7 +143,7 @@ exports.findAllinternational_champion = (req, res) => {
     .catch(err => {
         res.status(500).send({
             message:
-                err.message || "Algum erro ocorreu ao tentar pesquisar todos os itens inflamáveis."
+                err.message || "Algum erro ocorreu ao tentar pesquisar todos os campeões internacionais."
         });
     });
 };
