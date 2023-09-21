@@ -17,6 +17,7 @@ exports.create = (req, res) => {
         stadium_capacity: req.body.stadium_capacity,
         quantity_trophies: req.body.quantity_trophies,
         cast_value: req.body.cast_value,
+        id_leagues: req.body.id_leagues,
         international_champion: req.body.international_champion ? req.body.international_champion: false
     }
 
