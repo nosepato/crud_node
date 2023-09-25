@@ -16,7 +16,7 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.INTEGER
         },
         cast_value: {
-            type: Sequelize.DOUBLE
+            type: Sequelize.FLOAT
         },
         international_champion: {
             type: Sequelize.BOOLEAN

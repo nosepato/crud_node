@@ -10,7 +10,7 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.INTEGER
         },
         league_value: {
-            type: Sequelize.DOUBLE
+            type: Sequelize.FLOAT
         },
         is_top5: {
             type: Sequelize.BOOLEAN
