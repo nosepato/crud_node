@@ -136,7 +136,7 @@ exports.deleteAll = (req, res) => {
         });
 };
 
-exports.findAllinternational_champion = (req, res) => {
+exports.findAll_international_champion = (req, res) => {
     Team.findAll({ where: { international_champion: true } })
     .then(data => {
         res.send(data);

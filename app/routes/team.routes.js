@@ -7,7 +7,7 @@ module.exports = app => {
 
     router.get("/", teams.findAll);
 
-    router.get("/international_champion", teams.findAllinternational_champion);
+    router.get("/international_champion", teams.findAll_international_champion);
 
     router.get("/:id", teams.findOne);
 
